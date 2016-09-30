@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4A253B32-DB77-43FA-B54F-19B9A28DE030}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>AplikasiLaundry.My.MyApplication</StartupObject>
+    <RootNamespace>AplikasiLaundry</RootNamespace>
+    <AssemblyName>AplikasiLaundry</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>AplikasiLaundry.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>AplikasiLaundry.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Oracle.DataAccess, Version=2.112.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\app\AndrewNugroho\product\11.2.0\client_1\ODP.NET\bin\2.x\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormLogin.Designer.vb">
+      <DependentUpon>FormLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUtama.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUtama.Designer.vb">
+      <DependentUpon>FormUtama.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KonfirmasiNewLaundry.Designer.vb">
+      <DependentUpon>KonfirmasiNewLaundry.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KonfirmasiNewLaundry.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LaundryClass.vb" />
+    <Compile Include="Master\Master Harga.Designer.vb">
+      <DependentUpon>Master Harga.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Master Harga.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Master Member.Designer.vb">
+      <DependentUpon>Master Member.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Master Member.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\MasterUser.Designer.vb">
+      <DependentUpon>MasterUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Master\MasterUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\NewMember.Designer.vb">
+      <DependentUpon>NewMember.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Master\NewMember.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Report\memberReport.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>memberReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\FormTransTanggal.Designer.vb">
+      <DependentUpon>FormTransTanggal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\FormTransTanggal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\LaporanMember.Designer.vb">
+      <DependentUpon>LaporanMember.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\LaporanMember.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\TransaksiPerTanggal.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TransaksiPerTanggal.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\LaporanPerTanggal.Designer.vb">
+      <DependentUpon>LaporanPerTanggal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\LaporanPerTanggal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\AmbilCucian.Designer.vb">
+      <DependentUpon>AmbilCucian.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\AmbilCucian.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\NewLaundry.Designer.vb">
+      <DependentUpon>NewLaundry.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\NewLaundry.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\PrintNota\FormStrukPrint.Designer.vb">
+      <DependentUpon>FormStrukPrint.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\PrintNota\FormStrukPrint.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\PrintNota\PrintNota.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrintNota.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ViewAllTransaksi.Designer.vb">
+      <DependentUpon>ViewAllTransaksi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ViewAllTransaksi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewMember.Designer.vb">
+      <DependentUpon>ViewMember.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ViewMember.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewTrans.Designer.vb">
+      <DependentUpon>ViewTrans.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ViewTrans.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUtama.resx">
+      <DependentUpon>FormUtama.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KonfirmasiNewLaundry.resx">
+      <DependentUpon>KonfirmasiNewLaundry.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Master Harga.resx">
+      <DependentUpon>Master Harga.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Master Member.resx">
+      <DependentUpon>Master Member.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\MasterUser.resx">
+      <DependentUpon>MasterUser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\NewMember.resx">
+      <DependentUpon>NewMember.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\memberReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>memberReport.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\FormTransTanggal.resx">
+      <DependentUpon>FormTransTanggal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\LaporanMember.resx">
+      <DependentUpon>LaporanMember.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\TransaksiPerTanggal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TransaksiPerTanggal.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\LaporanPerTanggal.resx">
+      <DependentUpon>LaporanPerTanggal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\AmbilCucian.resx">
+      <DependentUpon>AmbilCucian.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\NewLaundry.resx">
+      <DependentUpon>NewLaundry.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\PrintNota\FormStrukPrint.resx">
+      <DependentUpon>FormStrukPrint.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\PrintNota\PrintNota.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PrintNota.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewAllTransaksi.resx">
+      <DependentUpon>ViewAllTransaksi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewMember.resx">
+      <DependentUpon>ViewMember.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewTrans.resx">
+      <DependentUpon>ViewTrans.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\colorful-triangles-background.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
